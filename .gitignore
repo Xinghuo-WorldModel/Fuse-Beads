@@ -1,0 +1,29 @@
+# Flutter/Dart
+.dart_tool/
+.packages
+build/
+*.iml
+.metadata
+
+# Android
+android/.gradle/
+android/local.properties
+android/app/build/
+*.apk
+*.aab
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Backup
+backup_v1.0/
+
+# OS
+.DS_Store
+Thumbs.db

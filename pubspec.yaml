@@ -1,0 +1,38 @@
+name: pindou
+description: 酥豆 - 将人像照片转换为拼豆图案
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  provider: ^6.1.1
+  image_picker: ^1.0.7
+  image: ^4.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.1
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  web:
+    generate: true
+  windows:
+    generate: true
+  image_path: "assets/icon.png"
+  adaptive_icon_background: "#1C1B1F"
+  adaptive_icon_foreground: "assets/icon.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/brand_colors/
+    - assets/icon.png

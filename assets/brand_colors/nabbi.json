@@ -1,0 +1,152 @@
+﻿[
+    {
+        "hex":  "#3A3D41",
+        "code":  "N01",
+        "name":  "Black"
+    },
+    {
+        "hex":  "#50443B",
+        "code":  "N02",
+        "name":  "Dark Brown"
+    },
+    {
+        "hex":  "#5A3E36",
+        "code":  "N03",
+        "name":  "Brown Medium"
+    },
+    {
+        "hex":  "#813547",
+        "code":  "N04",
+        "name":  "Maroon"
+    },
+    {
+        "hex":  "#A76224",
+        "code":  "N05",
+        "name":  "Caramel"
+    },
+    {
+        "hex":  "#AD967E",
+        "code":  "N06",
+        "name":  "Tan"
+    },
+    {
+        "hex":  "#EEB182",
+        "code":  "N07",
+        "name":  "Sand"
+    },
+    {
+        "hex":  "#8D8B7F",
+        "code":  "N08",
+        "name":  "Ash"
+    },
+    {
+        "hex":  "#2F4A39",
+        "code":  "N09",
+        "name":  "Hunter Green"
+    },
+    {
+        "hex":  "#D3CBCB",
+        "code":  "N10",
+        "name":  "Light Grey"
+    },
+    {
+        "hex":  "#644591",
+        "code":  "N11",
+        "name":  "Purple"
+    },
+    {
+        "hex":  "#E2D0BF",
+        "code":  "N12",
+        "name":  "Ivory"
+    },
+    {
+        "hex":  "#F3601B",
+        "code":  "N13",
+        "name":  "Orange"
+    },
+    {
+        "hex":  "#F9CA00",
+        "code":  "N14",
+        "name":  "Yellow"
+    },
+    {
+        "hex":  "#F4F4F3",
+        "code":  "N15",
+        "name":  "White"
+    },
+    {
+        "hex":  "#297A3B",
+        "code":  "N16",
+        "name":  "Green"
+    },
+    {
+        "hex":  "#3B75CB",
+        "code":  "N17",
+        "name":  "Bright Blue"
+    },
+    {
+        "hex":  "#E1B4AB",
+        "code":  "N18",
+        "name":  "Light Rose"
+    },
+    {
+        "hex":  "#DF2638",
+        "code":  "N19",
+        "name":  "Red"
+    },
+    {
+        "hex":  "#B58B69",
+        "code":  "N20",
+        "name":  "Light Brown"
+    },
+    {
+        "hex":  "#F5EC8D",
+        "code":  "N21",
+        "name":  "Light Yellow"
+    },
+    {
+        "hex":  "#48AF4F",
+        "code":  "N22",
+        "name":  "Lime"
+    },
+    {
+        "hex":  "#71A3E6",
+        "code":  "N23",
+        "name":  "Medium Blue"
+    },
+    {
+        "hex":  "#B6A0DB",
+        "code":  "N24",
+        "name":  "Lavender"
+    },
+    {
+        "hex":  "#EE6A97",
+        "code":  "N25",
+        "name":  "Pink"
+    },
+    {
+        "hex":  "#FCA879",
+        "code":  "N26",
+        "name":  "Peach"
+    },
+    {
+        "hex":  "#875F52",
+        "code":  "N27",
+        "name":  "Chocolate"
+    },
+    {
+        "hex":  "#A7C6F1",
+        "code":  "N28",
+        "name":  "Sky"
+    },
+    {
+        "hex":  "#EE9527",
+        "code":  "N29",
+        "name":  "Gold"
+    },
+    {
+        "hex":  "#C7BF5E",
+        "code":  "N30",
+        "name":  "Kiwi"
+    }
+]
