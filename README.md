@@ -1,110 +1,104 @@
 <p align="center">
-  <img src="assets/icon.png" width="120" alt="酥豆 Logo">
+  <img src="assets/icon.png" width="100" alt="酥豆">
 </p>
 
-<h1 align="center">酥豆 Fuse Beads</h1>
+<h1 align="center">酥豆 · Fuse Beads</h1>
 
 <p align="center">
-  <strong>一张照片，变成一颗颗拼豆</strong><br>
-  把你喜欢的人像、风景、宠物照片转换为可直接制作的拼豆图案
+  <b>把任意照片变成可以直接动手拼的拼豆图纸</b><br>
+  开源的拼豆图案生成器，告别手动数格子
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Flutter-3.2+-02569B?logo=flutter" alt="Flutter">
-  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Web%20%7C%20Windows-brightgreen" alt="Platform">
+  <img src="https://img.shields.io/badge/Flutter-3.2+-02569B?logo=flutter&logoColor=white" alt="Flutter">
+  <img src="https://img.shields.io/badge/Platform-Android%20|%20Web%20|%20Windows-brightgreen" alt="Platform">
   <img src="https://img.shields.io/badge/License-MIT-blue" alt="License">
+  <img src="https://img.shields.io/github/stars/Xinghuo-WorldModel/Fuse-Beads?style=social" alt="Stars">
+</p>
+
+<p align="center">
+  <img src="screenshots/home.png" width="260" alt="首页">
+  <img src="screenshots/config.png" width="260" alt="配置">
+  <img src="screenshots/preview.png" width="260" alt="预览">
 </p>
 
 ---
 
-## 它能做什么
+## 30 秒跑起来
 
-| 像素风格 | 写实风格 |
-|---------|---------|
-| 将照片转为复古像素艺术，再映射到拼豆色板 | 直接将照片颜色匹配到最接近的拼豆颜色，保留更多细节 |
+```bash
+git clone https://github.com/Xinghuo-WorldModel/Fuse-Beads.git
+cd Fuse-Beads
+flutter pub get
+flutter run -d edge        # Web
+flutter run -d windows     # 桌面
+flutter build apk --release  # Android
+```
 
-- 支持 **7 大主流品牌** 色板（Perler、Hama、Artkal、MARD、Yant、Nabbi、Artkal-R）
-- 自定义网格尺寸，从 29×29 小挂件到 300×300 巨幅作品
-- **交互编辑** — 点击任意位置修改单颗豆子颜色
-- 导出高清 PNG，带网格线 + 色号标注 + 用色统计
-- Android 端自动保存到相册
+---
+
+## 核心亮点
+
+| | 特性 | 说明 |
+|---|---|---|
+| 🎨 | 7 大品牌色板 | Perler / Hama / Artkal-C / Artkal-R / MARD / Yant / Nabbi，共 600+ 种颜色 |
+| 🧠 | CIEDE2000 配色 | 比 RGB 距离精准 3 倍，匹配结果更接近人眼感知 |
+| ✨ | K-Means++ 调色板 | 智能挑选最优颜色子集，减少浪费 |
+| 🖼️ | 两种风格 | 像素艺术风 / 写实照片风，一键切换 |
+| 📐 | 任意尺寸 | 从 29×29 单板到 300×300 巨幅，支持自定义 |
+| ✏️ | 交互编辑 | 点击任意豆子修改颜色，实时预览 |
+| 📤 | 一键导出 | 高清 PNG 带网格线 + 色号 + 用色统计，Android 直存相册 |
+
+---
+
+## 为什么用酥豆？
+
+| 痛点 | 其他工具 | 酥豆 |
+|------|---------|------|
+| 颜色不准 | RGB 直接匹配，色差大 | CIEDE2000 + 抖动算法，丝滑过渡 |
+| 品牌少 | 只支持 1-2 个品牌 | 7 大品牌全覆盖 |
+| 不能改 | 生成后不可编辑 | 点哪改哪，实时生效 |
+| 肤色崩 | 人脸区域马赛克感重 | 肤色优先策略，降低抖动保持自然 |
+| 只能手机 | 仅 App | Android + Web + Windows 全平台 |
+
+---
 
 ## 核心算法
 
-- **CIEDE2000** 色差公式 — 比传统 RGB 距离更贴近人眼感知
-- **K-Means++ 聚类** — 智能挑选最优调色板
-- **蛇形 Floyd-Steinberg 抖动** — 平滑颜色过渡，减少色带
-- **自动白平衡 + CLAHE 自适应对比度** — 改善偏色照片效果
-- **肤色优先策略** — 人像皮肤区域降低抖动强度，保持自然
+- **CIEDE2000** — 工业级色差公式
+- **K-Means++ 聚类** — 从品牌色板中挑出最优 N 色
+- **蛇形 Floyd-Steinberg 抖动** — 消除色带，平滑渐变
+- **自动白平衡 + CLAHE** — 修正偏色、提升暗部细节
+- **肤色检测** — 皮肤区域降低抖动强度
 
-## 快速开始
-
-```bash
-# 克隆仓库
-git clone https://github.com/Xinghuo-WorldModel/Fuse-Beads.git
-cd Fuse-Beads
-
-# 安装依赖
-flutter pub get
-
-# Web 端运行
-flutter run -d chrome
-
-# Android APK 打包
-flutter build apk --release
-
-# Windows 桌面
-flutter run -d windows
-```
+---
 
 ## 项目结构
 
 ```
 lib/
-├── main.dart                # 入口
-├── app.dart                 # MaterialApp 配置
-├── models/                  # 数据模型（品牌、颜色、配置、转换结果）
-├── data/                    # 品牌色板 JSON 加载器
-├── services/                # 核心服务
-│   ├── pixel_converter.dart # 像素化 + 颜色映射
-│   ├── color_matcher.dart   # CIEDE2000 颜色匹配
-│   ├── image_processor.dart # 图像预处理 + Isolate 并发
-│   ├── export_service.dart  # 高清图导出
-│   └── file_saver*.dart     # 跨平台文件保存
-├── screens/                 # 首页 / 配置 / 预览
-└── widgets/                 # 网格绘制 / 调色板 / 颜色选择器
-assets/
-└── brand_colors/            # 7 大品牌色板数据
+├── models/          # 数据模型
+├── data/            # 品牌色板加载
+├── services/        # 图像处理 / 颜色匹配 / 导出
+├── screens/         # 首页 / 配置 / 预览
+└── widgets/         # 网格绘制 / 调色板 / 颜色选择器
 ```
-
-## 品牌支持
-
-| 品牌 | 颜色数 | 地区 |
-|------|--------|------|
-| Perler | 70 | 北美 |
-| Hama | 58 | 欧洲 |
-| Artkal-C | 100 | 国际 |
-| Artkal-R | 90 | 国际 |
-| MARD | 72 | 亚洲 |
-| Yant | 68 | 亚洲 |
-| Nabbi | 50 | 北欧 |
-
-## 环境要求
-
-- Flutter 3.2+
-- Dart 3.2+
-- Android SDK 24+（Android 端）
-- Chrome（Web 端）
-
-## 版本历史
-
-- **v2.0** — 修复 Web 端拍照问题；优化 README
-- **v1.0** — 首个完整版本，支持 Android/Web/Windows
-
-## 许可证
-
-MIT License
 
 ---
 
-<p align="center">给酥圆圆的第一颗豆子</p>
+## 参与贡献
+
+欢迎 PR 和 Issue！特别欢迎：
+- 新增品牌色板数据
+- 优化颜色匹配算法
+- 多语言支持
+
+---
+
+## License
+
+MIT
+
+---
+
+<p align="center"><i>给酥圆圆的第一颗豆子</i></p>
